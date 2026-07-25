@@ -229,7 +229,7 @@ async def download_and_send_video(update: Update, context: ContextTypes.DEFAULT_
 
         file_size_mb = os.path.getsize(output_filename) / (1024 * 1024)
 
-        if file_size_mb > 1024:
+        if file_size_mb > 2000:
             await status_msg.edit_text(f"⚠️ Video hajmi juda katta ({file_size_mb:.1f} MB > 1024 MB).")
             os.remove(output_filename)
             return
